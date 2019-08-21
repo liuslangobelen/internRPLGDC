@@ -6,7 +6,7 @@ router.get('/ukm',(req,res)=>{
   var data = UKM.findOne({where:{nama:'kmk'}}).then(ukm=>{
         attributes: ['id', 'nama']
       })
-  res.render(__dirname + '/views/ukm.html',{name:data.nama});
+  res.render(__dirname + '/views/telukm.html',{name:data.nama});
 })
 
 module.exports = router;
